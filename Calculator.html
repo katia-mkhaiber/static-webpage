@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title> React Calculator </title>
+    <style>
+        body {
+            background-image: url("image/WhatsApp Image 2025-09-15 at 20.23.32_23f3ca45.jpg");
+            background-size: cover;
+            background-position:center;
+            background-attachment:fixed;
+            margin:0;
+        }
+        .container {
+            width: 100%;
+            height: 90vh;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+        }
+        .calculator{
+            background-color:slategrey;
+            padding:30px;
+            border-radius:10px;
+            margin:auto;
+        }
+        input{
+            width:50px;
+            height:50px;
+            border-radius:10px;
+            margin:2px;
+            background-color:antiquewhite;
+            color:black;
+            box-shadow:2px 2px;
+        }
+        form input.equal{
+            background-color:lawngreen;
+        }
+        a{
+            text-align:center;
+            color:black;
+            font-weight:bold;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="operator">
+                <form>
+                    <div>
+                        <input style="width:230px" , height:"100px" type="text" name="display">
+                    </div>
+                    <div>
+                        <input style="background-color:blue" type="button" value="C" onclick="display.value=''">
+                        <input style="background-color:red" type="button" value="DEL" onclick="display.value= display.value.toString().slice(0,-1)">
+                        <input type="button" value="." onclick="display.value+='.'">
+                        <input type="button" value="-" onclick="display.value='-'">
+                    </div>
+                    <div>
+                        <input type="button" value="1" onclick="display.value+='1'">
+                        <input type="button" value="2" onclick="display.value+='2'">
+                        <input type="button" value="3" onclick="display.value+='3'">
+                        <input type="button" value="*" onclick="display.value+='*'">
+                    </div>
+                    <div>
+                        <input type="button" value="4" onclick="display.value+='4'">
+                        <input type="button" value="5" onclick="display.value+='5'">
+                        <input type="button" value="6" onclick="display.value+='6'">
+                        <input type="button" value="/" onclick="display.value+='/'">
+                    </div>
+                    <div>
+                        <input type="button" value="7" onclick="display.value+='7'">
+                        <input type="button" value="8" onclick="display.value+='8'">
+                        <input type="button" value="9" onclick="display.value+='9'">
+                        <input type="button" value="+" onclick="display.value+='+'">
+                    </div>
+                    <div>
+                        <input type="button" value="0" onclick="display.value+='0'">
+                        <input type="button" value="00" onclick="display.value+='00'">
+                        <input style="width:100px" , height:"100px" type="button" value="=" onclick="display.value=eval(display.value)" class="equal" />
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <a href="index.html">Back to Home</a><br />
+    <a href="To-Do.html">Back to To-Do</a>
+</body>
+</html>
